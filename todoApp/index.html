@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./todo.css" />
+    <link rel="stylesheet" href="todo.css" />
     <title>Todo App</title>
   </head>
   <body>
@@ -16,16 +16,22 @@
       <div class="header">
         <h1><i class="fa-solid fa-clipboard-list"></i> To-do List</h1>
         <div class="searchBox">
-            <input class="inputData" type="text" placeholder="Enter task" /><button 
-            class="submitBtn"
+            <input style="color: #ffff;" id="inputData"  type="text" placeholder="Enter task" /><button 
+            onclick="addItem()"
+            id="submitBtn"
             type="submit">
                 Submit
               </button>
+              <p class="para">can't submit emtpy task</p>
             </div>
+            
       </div>
-      <div class="taskGenerator">
-            I am Task Generator
+      <div id="taskGenerator">
+            <div>
+                
+            </div>
     </div>
     </div>
+    <script src="todo.js"></script>
   </body>
 </html>

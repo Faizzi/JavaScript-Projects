@@ -1,36 +1,143 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-#container{
+
+body {
+    background: linear-gradient(to right, #e46060, #5656ed, #772424);
+}
+
+#container {
     width: 100%;
     height: 100vh;
-    border: 3px solid red;
+    color: #fff;
 }
-#container .header{
+
+#container .header {
     display: flex;
     justify-content: space-between;
-    margin:2rem ;
+    margin: 2rem;
+    flex-wrap: wrap;
 }
-#container .searchBox input,button{
+
+#container .searchBox input,
+button {
+    /* border-color: #ffff; */
     font-size: 20px;
     padding: 12px 16px;
-}
-#container .searchBox input{
-     border-top-left-radius: 10px;
-     border-bottom-left-radius: 10px;
-     border-right: none;
-     outline: none;
-}
-#container .searchBox button{
-    border-left: none;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border: none;
     outline: none;
+    
+}
+
+#container .searchBox input {
+
+    background-color: transparent;
+   border: 1px solid yellow;
+   border-right: none;
+}
+#container .searchBox input::placeholder{
+    color: #fff;
+}
+
+
+
+#container .searchBox button {
+    /* border-left: none; */
+    outline: none;
+    cursor: pointer;
+    border: 1px solid yellow;
+    background-color: transparent;
+    color: #fff;
+    border-left: none;
+    border-top-right-radius: 10px; 
+   border-bottom-right-radius: 10px; 
 
 }
-#container .taskGenerator{
-    border: 1px solid red;
+
+
+#container .searchBox input:hover {
+         background-color: #454545;
+         border: 1px solid red;
+         border-top-left-radius: 10px;
+         border-bottom-left-radius: 10px;
+    }
+#container .searchBox .para {
+    color: red;
+    font-size: 1.5rem;
+    display: none;
+}
+
+#taskGenerator {
+   
     margin: 3rem auto;
     width: 50%;
     padding: 1.5rem;
+}
+
+#container .items {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #454545;
+    border-radius: 5px;
+    background-color: #fff;
+
+}
+
+#container .items i {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+@media(max-width:768px){
+    #container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container .header{
+        margin: ;
+    }
+    #container .searchBox{
+        margin-top: 3rem;
+    }
+}
+@media(max-width:480px){
+    #container .searchBox{
+          width: 100%;
+          /* border: 1px solid red; */
+    }
+    #container .searchBox input{
+        width: 70%;
+        font-size: 1rem;
+    }
+    #container .searchBox button{
+       width: 30%;
+        font-size: 1rem;
+    }
+    #taskGenerator{
+        padding: 0;
+        margin:1rem auto;
+        /* border: 1px solid red; */
+    }
+    #taskGenerator .items{
+    width: 100%;
+    /* border: 1px solid red; */
+    font-size: .8rem;
+    }
+    #taskGenerator .items i{
+        font-size: .6rem;
+    }
 }
