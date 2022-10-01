@@ -3,6 +3,8 @@ var input = document.getElementById("inputData");
 var submitBtn = document.getElementById("submitBtn");
 var trashIcon = document.getElementById("trash");
 var alertlabel = document.getElementsByClassName("para")[0];
+
+
 submitBtn.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     addItem();
@@ -30,6 +32,7 @@ function addItem() {
     trashIcon.className = "fa-solid fa-trash";
     trashIcon.style.color = "darkgray";
     checkIcon.style.color = "darkgray";
+    
 
     checkIcon.addEventListener("click", function () {
       checkIcon.style.color = "limegreen";

@@ -93,6 +93,7 @@ button {
     color: #454545;
     border-radius: 5px;
     background-color: #fff;
+    overflow:hidden;
 
 }
 
@@ -108,7 +109,7 @@ button {
         align-items: center;
     }
     #container .header{
-        margin: ;
+        margin-top: 2rem;
     }
     #container .searchBox{
         margin-top: 3rem;
