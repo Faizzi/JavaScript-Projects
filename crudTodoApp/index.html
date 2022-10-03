@@ -1,15 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="todo.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="todo.css" />
     <title>Crud Advanced Project</title>
-</head>
-<body>
-    
-    
+  </head>
+  <body>
+    <div class="container">
+      <h4 class="mb-3">Todo App</h4>
+      <div id="addNewTask" data-bs-toggle="modal" data-bs-target="#form">
+        <span>Add New Task</span>
+        <i class="fas fa-plus"></i>
+      </div>
+      <h5 class="text-center my-3">Task</h5>
+
+      <!-- Modal -->
+      <form
+        class="modal fade"
+        id="form"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Task Title</p>
+              <input class="form-control" type="text" name="" id="textInput" />
+              <div id="msg"></div>
+              <br />
+
+              <p>Due Date</p>
+              <input class="form-control" type="date" name="" id="dateInput" />
+              <br />
+              <p>Description</p>
+              <textarea
+                class="form-control"
+                name=""
+                id="textarea"
+                cols="30"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" id="add" class="btn btn-primary">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div id="tasks">
+        <div class="task1">
+          <span class="fw-bold">Task 1</span>
+          <span class="small text-secondary">3-10-2022</span>
+          <p>Going To gym men</p>
+          <span class="options">
+            <i
+              data-bs-toggle="modal"
+              data-bs-target="#form"
+              onclick="updateTask(this)"
+              class="fas fa-edit"
+            ></i>
+            <i onclick="deleteTask(this)" class="fas fa-trash-alt"></i>
+          </span>
+        </div>
+        <div class="task2">
+          <span class="fw-bold">Task 2</span>
+          <span class="small text-secondary">3-10-2022</span>
+          <p>Going To gym men</p>
+          <span class="options">
+            <i
+              data-bs-toggle="modal"
+              data-bs-target="#form"
+              onclick="updateTask(this)"
+              class="fas fa-edit"
+            ></i>
+            <i onclick="deleteTask(this)" class="fas fa-trash-alt"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
     <script src="todo.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
