@@ -1,20 +1,60 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
 }
-#container{
+
+#container {
     width: 30%;
+    height: 300px;
     margin: 4rem auto;
     /* border: 1px solid red; */
     padding: 15px;
     background-color: #e5e5e5;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-h1{
+#container .buttons{
+    display: flex;
+    gap: 8px;
+}
+h1 {
     font-size: 45px;
 }
-#container .countDown{
+
+#timeCounter {
     margin: 1rem 1rem;
-     font-size: 50px;
+    font-size: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#timeInput {
+    margin: 1rem 0rem;
+    padding: 8px 14px;
+    outline: none;
+    border-radius: 8px;
+    width: 80%;
+}
+
+#msg {
+    color: red;
+}
+
+.btn {
+    padding: 8px 10px;
+    background-color: #24a0ed;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px ;
 }
