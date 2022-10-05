@@ -1,3 +1,5 @@
+
+
 // Infinite Loop Swiper Js
 // var swiper = new Swiper(".mySwiper", {
 //     slidesPerView: 1,
@@ -31,7 +33,6 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 // Autoplay End
-
 
 // Effect CoverFlow
 // var swiper = new Swiper(".mySwiper", {
