@@ -1,0 +1,89 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    background-color: gray;
+}
+
+#container {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    border: 1px solid red;
+    margin: 0 auto;
+    /* background-color: gray; */
+
+}
+
+#submitBtn {
+    display: inline-block;
+    margin: 2rem auto;
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background .7s ease;
+    border: none;
+}
+
+#submitBtn:hover {
+    background: #d8d2d2;
+}
+
+
+#container form {
+    background-color: #fff;
+    width: 40%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 30px;
+    width: 100%;
+    /* border: 1px solid red; */
+    margin: 1rem auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    display: none;
+}
+
+#container form>input {
+    padding: 8px 4rem;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid lightgray;
+}
+
+#container form>input:hover,
+#container form>input:active {
+    outline: 1px solid rgb(218, 210, 210);
+}
+
+form #btn {
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 8px;
+    width: 50%;
+    outline: none;
+    border: 1px solid lightgray;
+    background-color: #24a0ed;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+form a {
+    cursor: pointer;
+    transition: color .1s ease;
+}
+
+form a:hover {
+    color: blue;
+}
